@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CleanArch</string>
+
+    <!-- Common -->
+    <string name="open_menu_desc">Open menu</string>
+    <string name="go_upward_desc">Go back</string>
+
+    <!-- Home Screen -->
+    <string name="home_title">Home</string>
+    <string name="button_hello">Hello</string>
+    <string name="elapsed">Opened %1$d minutes ago</string>
+
+    <!-- New feature -->
+    <string name="new_feature_title">New feature</string>
+    <string name="new_feature_text">This is an experimental new feature.</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Settings</string>
+    <string name="allow_notification">Allow Clean Arch Sample to notify you updates.</string>
+    <string name="allow_analytics">Allow Clean Arch Sample to collect anonymous usage information.</string>
+    <string name="allow_crashlytics">Allow Clean Arch Sample to collect the crash reports to improve the app.</string>
+
+    <!-- About Screen -->
+    <string name="about_title">About</string>
+    <string name="about_text">This is a Clean Architecture sample of Android application.</string>
+    <string name="button_developer">Developer options</string>
+
+    <!-- Developer Screen -->
+    <string name="developer_title">Developer options</string>
+    <string name="enable_new_feature">Enable the new feature.</string>
+</resources>

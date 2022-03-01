@@ -1,0 +1,53 @@
+@startuml
+folder "apps" {
+  [app-tv]
+  [demo-mobile]
+  [demo-tv]
+}
+
+folder "ui" {
+  [ui-mobile]
+  [ui-tv]
+  [ui-widget]
+}
+
+folder "comp" {
+  [analytics-firebase]
+  [analytics-debug]
+  [config-firebase]
+  [config-local]
+  [core]
+  [download]
+  [feature]
+  [notification]
+  [sample-data]
+  [settings]
+}
+
+folder "lib" {
+  [android]
+  [compose]
+  [strings]
+}
+
+[app] --> [domain]
+
+[app-tv] --> [domain]
+[demo-mobile] --> [domain]
+[demo-tv] --> [domain]
+
+[ui-mobile] --> [domain]
+[ui-tv] --> [domain]
+[ui-widget] --> [domain]
+
+[analytics-firebase] -up-> [domain]
+[analytics-debug] -up-> [domain]
+[config-firebase] -up-> [domain]
+[config-local] -up-> [domain]
+[core] -up---> [domain]
+[download] -up-> [domain]
+[feature] -up-> [domain]
+[notification] -up-> [domain]
+[sample-data] -up-> [domain]
+[settings] -up-> [domain]
+@enduml

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "310996819373",
+    "project_id": "clean-arch-sample",
+    "storage_bucket": "clean-arch-sample.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310996819373:android:9a199b44b233d06e009524",
+        "android_client_info": {
+          "package_name": "dev.yankew.cleanarch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310996819373-7c14frv82atmppvd3ihjchrdiki04lb8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmR_gDj3Cbw49g6-zduGWk2y8JfXZ_Wxw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310996819373-7c14frv82atmppvd3ihjchrdiki04lb8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

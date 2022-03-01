@@ -1,0 +1,32 @@
+@startuml
+folder "ui" {
+  [ui-mobile]
+  [ui-widget]
+}
+
+folder "comp" {
+  [analytics-debug]
+  [analytics-firebase]
+  [config-firebase]
+  [config-local]
+  [core]
+  [download]
+  [feature]
+  [notification]
+  [settings]
+}
+
+[app] ...> [analytics-debug]
+[app] ...> [analytics-firebase]
+[app] ...> [config-firebase]
+[app] ...> [config-local]
+[app] ...> [core]
+[app] ...> [download]
+[app] ...> [feature]
+[app] ...> [notification]
+[app] ...> [settings]
+[app] .up.> [ui-mobile]
+[app] .up.> [ui-widget]
+
+[app] -right--> [domain]
+@enduml

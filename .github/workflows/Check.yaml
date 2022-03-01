@@ -1,0 +1,45 @@
+name: Check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Copy CI gradle.properties
+        run: mkdir -p ~/.gradle ; cp .github/ci-gradle.properties ~/.gradle/gradle.properties
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+
+      - name: Check and build project
+        run: ./gradlew spotlessCheck lintDebug assembleDebug
+
+      - name: Upload build outputs
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-outputs
+          path: |
+            app/build/outputs
+            apps/demo-mobile/build/outputs
+
+      - name: Upload build reports
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-reports
+          path: |
+            app/build/reports
+            apps/demo-mobile/build/reports

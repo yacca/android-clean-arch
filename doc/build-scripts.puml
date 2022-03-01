@@ -1,0 +1,46 @@
+@startuml
+object "base-android-app" as baseAppPlugin #skyblue
+object "base-android-library" as baseLibPlugin #skyblue
+object "compose-library" as composeLibPlugin #skyblue
+object "hilt-library" as hiltLibPlugin #skyblue
+object "main-component" as mainCompPlugin #skyblue
+object "ui-component" as uiCompPlugin #skyblue
+object app
+object "apps/demo-mobile" as mobileDemoApp
+object "lib/android" as androidLib
+object "lib/compose" as composeLib
+object "lib/init" as initLib
+object "lib/strings" as stringsLib
+object "ui/ui-mobile" as mobileUi
+object "ui/ui-widget" as widget
+map Components {
+  1 => analytics-debug
+  2 => analytics-firebase
+  3 => config-local
+  4 => config-remote
+  5 => core
+  6 => download
+  7 => feature
+  8 => notification
+  9 => sample-data
+  10 => settings
+}
+
+composeLibPlugin --> baseLibPlugin
+hiltLibPlugin --> baseLibPlugin
+mainCompPlugin --> hiltLibPlugin
+uiCompPlugin --> mainCompPlugin
+uiCompPlugin --> composeLibPlugin
+Components --> mainCompPlugin
+
+androidLib --> baseLibPlugin
+composeLib --> composeLibPlugin
+initLib --> hiltLibPlugin
+stringsLib --> baseLibPlugin
+
+mobileUi --> uiCompPlugin
+widget --> uiCompPlugin
+
+app --> baseAppPlugin
+mobileDemoApp --> baseAppPlugin
+@enduml

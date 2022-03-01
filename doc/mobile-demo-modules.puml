@@ -1,0 +1,30 @@
+@startuml
+folder "apps" {
+  [demo-mobile]
+}
+
+folder "ui" {
+  [ui-mobile]
+  [ui-widget]
+}
+
+folder "comp" {
+  [analytics-debug]
+  [config-local]
+  [core]
+  [notification]
+  [sample-data]
+  [settings]
+}
+
+[demo-mobile] ...> [analytics-debug]
+[demo-mobile] ...> [config-local]
+[demo-mobile] ...> [core]
+[demo-mobile] ...> [notification]
+[demo-mobile] ...> [sample-data]
+[demo-mobile] ...> [settings]
+[demo-mobile] .up.> [ui-mobile]
+[demo-mobile] .up.> [ui-widget]
+
+[demo-mobile] -right--> [domain]
+@enduml
